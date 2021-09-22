@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Fernet",
+        "precio": 300,
+        "img": "./assets/images/fernet.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Gancia" ,
+        "precio": "800",
+        "img": "./assets/images/gancia.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Skyy" ,
+        "precio": "800",
+        "img": "./assets/images/skyy-vodka.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Cerveza Andes" ,
+        "precio": "800",
+        "img": "./assets/images/cerveza-andes.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Aperol" ,
+        "precio": "800",
+        "img": "./assets/images/aperol.png"
+    },
+    {
+        "id": 6,
+        "name": "Bacardi" ,
+        "precio": "800",
+        "img": "./assets/images/bacardi.png"
+    },
+    {
+        "id": 7,
+        "name": "Absolut" ,
+        "precio": "800",
+        "img": "./assets/images/absolut-vodka.png"
+    },
+    {
+        "id": 8,
+        "name": "Vino Novecento Malbec" ,
+        "precio": "800",
+        "img": "./assets/images/vino-malbec.png"
+    }
+] 

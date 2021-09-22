@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--icon-->
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <!--load all styles -->
+    <link rel="stylesheet" href="style/estilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h1>Tienda online de bebidas</h1>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <div class="contenedor-bebidas">
+
+        </div>
+
+        <h2>Bebidas Seleccionadas</h2>
+
+        <!--  <div class="bebida-seleccionada"> </div>
+
+        <table class="tabla"></table> -->
+
+        <div>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="contenido">
+                </tbody>
+            </table>
+            <div class="row mx-4">
+                <div class="col">
+                    <h3 class="text-black">Total: <span class="text-success total-price" id="precioTotal">0</span></h3>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <button class="btn btn-success">Finalizar Compra</button>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <button onclick="limpiarHTML()" id="miBoton"> Vaciar productos </button>
+        <a class="volver-arriba">Volver arriba</a>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js "> </script>
+    <!--   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

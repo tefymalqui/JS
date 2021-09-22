@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+img {
+    width: 75%;
+}
+
+.contenedor {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.contenedor-bebidas {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+ .card {
+    margin-bottom: 2rem;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    color: white;
+    overflow: hidden;
+}
+
+.imagen-bebidas {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+} 
+
+.nombre-bebida {
+    text-align: center;
+    padding-top: 1rem;
+    color: black;
+    font-size: 2.5rem;
+}
+.btn-agregar {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btn-agregar:hover {
+    background-color: grey;
+} 
+.bebida-seleccionada{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+h2 {
+    color: black;
+    text-align: center;
+}
+h3 {
+    color:black;
+}
+#miBoton {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 1rem 0;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#miBoton:hover {
+    background-color: grey;
+}
+
+.volver-arriba {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: block;
+    background: grey;
+    color: black;
+    padding: 0.3rem 1rem;
+    transition: all 0.5s linear;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.volver-arriba:hover {
+    opacity: 1;
+}
+
+#btn3 {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#btn3:hover {
+    background-color: grey;
+}
+
+.btn-delete {
+    height: 20px;
+    width: 20px;
+}
