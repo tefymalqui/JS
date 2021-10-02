@@ -67,7 +67,7 @@ function hacerTabla(){
        <th scope="row">${product.id}</th>
        <td>${product.name}</td>
        <td class="price">$${product.precio}</td>
-       <td><input type="number" min="1" value=${product.cantidad} class="input-elemento">
+       <td><input type="number" min="1" value="" class="input-elemento">
        </td>
        <td><button value="Eliminar" title="Eliminar" class="btn btn-danger ">x</button></td>
         </tr>
