@@ -2,10 +2,7 @@
 
 let bebidasSeleccionadas = [];
 const contenido = document.querySelector('#contenido');
-let total = document.querySelector('#precioTotal');
-
 const contenedorBebidas = document.querySelector(".contenedor-bebidas");
-//const contenedorSeleccion = document.querySelector(".bebida-seleccionada");
 
 //ruta a mi json
 const url = '../assets/data/productos.json';  
@@ -58,8 +55,6 @@ function mostrarBebidas( products ) {
  
 //funcion para hacer la tabla
 function hacerTabla(){
-    limpiarHTML()
-  //  console.log(bebidasSeleccionadas);
     contenido.innerHTML = '';
     for(let product of bebidasSeleccionadas){
        contenido.innerHTML += `
@@ -73,30 +68,44 @@ function hacerTabla(){
         </tr>
        ` 
     }
-
+   carritoTotal();
 }
 
 //funcion para carrito total
-function calculoTotal(){
+function carritoTotal(){
     let Total = 0;
+    const itemTotal = document.querySelector('.precioTotal')
+    bebidasSeleccionadas.forEach((bebidaSeleccionada) =>{
+      const precio = Number(bebidaSeleccionada.precio.replace("$", ''))
+      Total = Total + precio;
+    })
+    itemTotal.innerHTML = `$${Total}`
 }
 
 //funcion para aumentar la cantidad del producto
 
 
 //boton para eliminar fila
-$(document).on('click', '.btn-danger', function(e){
-    
-    $(this).parents('tr').remove();
+$(document).on('click', '.btn-danger', function eliminarProducto(i) {
+    const removed = bebidasSeleccionadas.splice(i, 1) 
+    contenido.innerHTML =""       
+    hacerTabla()                 
+    localStorage.setItem("carritoCargado", JSON.stringify(bebidasSeleccionadas))
+
+  $(this).parents('tr').remove(); //elimina la fila
 })
 
 //funcion para vaciar carrito
 const btnVaciarCarrito = document.querySelector ('#miBoton')
-btnVaciarCarrito.addEventListener('click', limpiarHTML);
+btnVaciarCarrito.addEventListener('click', () => {
+    bebidasSeleccionadas = [];
+    carritoTotal();
+    vaciarCarrito();
+});
 
-function limpiarHTML() {
-    contenido.innerHTML = '';
-
+function vaciarCarrito() {
+   contenido.innerHTML = '';
+ 
 }
 
 $("#miBoton").click (function () {
