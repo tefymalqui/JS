@@ -3,6 +3,7 @@
 let bebidasSeleccionadas = [];
 const contenido = document.querySelector('#contenido');
 const contenedorBebidas = document.querySelector(".contenedor-bebidas");
+const form = document.querySelector('#formulario');
 
 //ruta a mi json
 const url = '../assets/data/productos.json';  
@@ -41,6 +42,7 @@ function setProductById(id) {
         })
 };
 
+//funcion para motrar las bebidas en el HTML
 function mostrarBebidas( products ) {
     products.forEach( product => {
         contenedorBebidas.innerHTML += ` 
@@ -55,6 +57,7 @@ function mostrarBebidas( products ) {
  
 //funcion para hacer la tabla
 function hacerTabla(){
+   // limpiarHTML()
     contenido.innerHTML = '';
     for(let product of bebidasSeleccionadas){
        contenido.innerHTML += `
@@ -62,13 +65,12 @@ function hacerTabla(){
        <th scope="row">${product.id}</th>
        <td>${product.name}</td>
        <td class="price">$${product.precio}</td>
-       <td><input type="number" min="1" value="" class="input-elemento">
-       </td>
+       <td><input type="number" min="1" value="" class="input-elemento"></td> 
        <td><button value="Eliminar" title="Eliminar" class="btn btn-danger ">x</button></td>
         </tr>
-       ` 
+        ` ;
     }
-   carritoTotal();
+    carritoTotal ();
 }
 
 //funcion para carrito total
@@ -82,9 +84,6 @@ function carritoTotal(){
     itemTotal.innerHTML = `$${Total}`
 }
 
-//funcion para aumentar la cantidad del producto
-
-
 //boton para eliminar fila
 $(document).on('click', '.btn-danger', function eliminarProducto(i) {
     const removed = bebidasSeleccionadas.splice(i, 1) 
@@ -95,11 +94,56 @@ $(document).on('click', '.btn-danger', function eliminarProducto(i) {
   $(this).parents('tr').remove(); //elimina la fila
 })
 
+//funcion para realizar pedido
+function formulario(){
+     form.innerHTML = '';
+     form.innerHTML += `
+     <form>
+  <div class="form-row">
+    <div class="col-md-4 mb-3 ">
+      <label for="validationServer01" class="light">Nombre</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nombre" required>
+      <div class="invalid-feedback" id="nombre">
+      Ingrese su nombre
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationServer02">Apellido</label>
+      <input type="text" class="form-control" placeholder="Apellido" required>
+      <div class="invalid-feedback">
+        Ingrese su apellido
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationServer03">Dirección</label>
+      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Direccion" name="direccion" id="direccion" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationServer04">Telefono</label>
+      <input type="number" class="form-control is-invalid" id="validationServer04" placeholder="Telefono" required>
+    </div>
+  </div>
+  <button class="btn btn-secondary m-3" type="submit" onClick="confirmar()">Realizar compra</button>
+</form>
+     `
+} 
+
+//funcion de finalizar
+function confirmar(){
+    alert = (`Muchas gracias por su compra ${nombre} le estaremos enviando su pedido a ${direccion}`)
+}
+
+//funcion para aumentar cantidad 
+
+
 //funcion para vaciar carrito
 const btnVaciarCarrito = document.querySelector ('#miBoton')
 btnVaciarCarrito.addEventListener('click', () => {
     bebidasSeleccionadas = [];
     carritoTotal();
+    form.innerHTML = ''
     vaciarCarrito();
 });
 
@@ -108,13 +152,14 @@ function vaciarCarrito() {
  
 }
 
+//sweet alert de vaciar carrito
 $("#miBoton").click (function () {
     swal ( "Deseas eliminar tu lista de productos? " , { 
         miBoton : [ " No " , " Si " ] ,  
       } ) ;
 });
 
-
+//volver arriba
 jQuery('document').ready(function($){
     let subir = $('.volver-arriba');
 
@@ -127,5 +172,3 @@ jQuery('document').ready(function($){
 
 
 var btnBoton = document.getElementById('boton');
-
-

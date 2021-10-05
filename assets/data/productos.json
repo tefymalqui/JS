@@ -1,50 +1,51 @@
 [
     {
         "id": 1,
-        "name": "Fernet",
-        "precio": 300,
-        "img": "./assets/images/fernet.jpg"
+        "name": "Red Label Whisky" ,
+        "precio": "1890",
+        "img": "./assets/images/red.png"
     },
     {
         "id": 2,
         "name": "Gancia" ,
-        "precio": "800",
+        "precio": "310",
         "img": "./assets/images/gancia.jpeg"
+        
     },
     {
         "id": 3,
         "name": "Skyy" ,
-        "precio": "800",
+        "precio": "660",
         "img": "./assets/images/skyy-vodka.jpg"
     },
     {
         "id": 4,
-        "name": "Cerveza Andes" ,
-        "precio": "800",
-        "img": "./assets/images/cerveza-andes.jpg"
+        "name": "Fernet Branca 750ml",
+        "precio": "620",
+        "img": "./assets/images/fernet.jpg"
     },
     {
         "id": 5,
-        "name": "Aperol" ,
-        "precio": "800",
-        "img": "./assets/images/aperol.png"
+        "name": "Vino Novecento Malbec" ,
+        "precio": "200",
+        "img": "./assets/images/vino-malbec.png"
     },
     {
         "id": 6,
-        "name": "Bacardi" ,
-        "precio": "800",
-        "img": "./assets/images/bacardi.png"
+        "name": "Aperol" ,
+        "precio": "720",
+        "img": "./assets/images/aperol.png"
     },
     {
         "id": 7,
-        "name": "Absolut" ,
-        "precio": "800",
-        "img": "./assets/images/absolut-vodka.png"
+        "name": "Bacardi" ,
+        "precio": "1214",
+        "img": "./assets/images/bacardi.png"
     },
     {
         "id": 8,
-        "name": "Vino Novecento Malbec" ,
-        "precio": "800",
-        "img": "./assets/images/vino-malbec.png"
+        "name": "Absolut Saborizado" ,
+        "precio": "1200",
+        "img": "./assets/images/absolut-vodka-raspberri.png"
     }
 ] 
